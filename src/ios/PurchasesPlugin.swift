@@ -59,12 +59,12 @@ import RevenueCat
 
     @objc(setDebugLogsEnabled:)
     func setDebugLogsEnabled(command: CDVInvokedUrlCommand) {
-        guard let debugLogsEnabled = command.arguments[0] as? Bool else {
-            self.sendBadParameterFor(command: command, parameterNamed: "debugLogsEnabled", expectedType: Bool.self)
-            return
-        }
-
-        CommonFunctionality.setDebugLogsEnabled(debugLogsEnabled)
+//        guard let debugLogsEnabled = command.arguments[0] as? Bool else {
+//            self.sendBadParameterFor(command: command, parameterNamed: "debugLogsEnabled", expectedType: Bool.self)
+//            return
+//        }
+//
+//        CommonFunctionality.setDebugLogsEnabled(debugLogsEnabled)
         self.sendOKFor(command: command)
     }
 

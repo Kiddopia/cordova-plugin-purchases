@@ -16,6 +16,21 @@ import PurchasesHybridCommon
         CommonFunctionality.getOfferings(completion: self.responseCompletion(forCommand: command))
     }
 
+    @objc(promotionalOffer:)
+    func promotionalOffer(command: CDVInvokedUrlCommand) {
+        guard let productIdentifier = command.arguments[0] as? String else {
+            self.sendBadParameterFor(command: command, parameterNamed: "productIdentifier", expectedType: String.self)
+            return
+        }
+        
+        guard let discountIdentifier = command.arguments[1] as? String else {
+            self.sendBadParameterFor(command: command, parameterNamed: "discountIdentifier", expectedType: String.self)
+            return
+        }
+
+        CommonFunctionality.promotionalOffer(for: productIdentifier, discountIdentifier: discountIdentifier, completion: self.responseCompletion(forCommand: command))        
+    }
+
     @objc(getProducts:)
     func getProducts(command: CDVInvokedUrlCommand) {
         guard let products = command.arguments[0] as? [String] else {
@@ -36,7 +51,7 @@ import PurchasesHybridCommon
         }
 
         CommonFunctionality.purchase(product: productIdentifier,
-                                     signedDiscountTimestamp: nil,
+                                     signedDiscountTimestamp: command.arguments[1] as? String,
                                      completion: self.responseCompletion(forCommand: command))
     }
 

@@ -12,14 +12,14 @@ import PurchasesHybridCommon
 
     @objc(setAutomaticAppleSearchAdsAttributionCollection:)
     func setAutomaticAppleSearchAdsAttributionCollection(command: CDVInvokedUrlCommand) {
-        guard let automaticCollection = command.arguments[0] as? Bool else {
-            self.sendBadParameterFor(command: command,
-                                     parameterNamed: "AutomaticAppleSearchAdsAttributionCollection",
-                                     expectedType: Bool.self)
-            return
-        }
-
-        CommonFunctionality.setAutomaticAppleSearchAdsAttributionCollection(automaticCollection)
+//        guard let automaticCollection = command.arguments[0] as? Bool else {
+//            self.sendBadParameterFor(command: command,
+//                                     parameterNamed: "AutomaticAppleSearchAdsAttributionCollection",
+//                                     expectedType: Bool.self)
+//            return
+//        }
+//
+//        CommonFunctionality.setAutomaticAppleSearchAdsAttributionCollection(automaticCollection)
         self.sendOKFor(command: command)
     }
 
