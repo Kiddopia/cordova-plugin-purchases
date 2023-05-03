@@ -34,9 +34,6 @@
         <source-file src="src/ios/PurchasesPlugin+Purchasing.swift" />
         <source-file src="src/ios/PurchasesPlugin+Users.swift" />
         <podspec>
-            <config>
-                <source url="https://github.com/CocoaPods/Specs.git"/>
-            </config>
             <pods use-frameworks="true">
                 <pod name="PurchasesHybridCommon" spec="4.15.0"/>
             </pods>
