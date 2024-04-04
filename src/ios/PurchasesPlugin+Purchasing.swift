@@ -65,10 +65,10 @@ import PurchasesHybridCommon
             return
         }
 
-        CommonFunctionality.purchase(package: packageIdentifier,
-                                     offeringIdentifier: offeringIdentifier,
-                                     signedDiscountTimestamp: nil,
-                                     completion: self.responseCompletion(forCommand: command))
+//        CommonFunctionality.purchase(package: packageIdentifier,
+//                                     offeringIdentifier: offeringIdentifier,
+//                                     signedDiscountTimestamp: nil,
+//                                     completion: self.responseCompletion(forCommand: command))
     }
 
     @objc(restorePurchases:)
